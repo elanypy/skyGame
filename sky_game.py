@@ -28,7 +28,7 @@ clock = pygame.time.Clock()
 class Player(pygame.sprite.Sprite):  #create a rectangle white with size 75,25
     def __init__(self):
         super(Player, self).__init__()
-        self.surf = pygame.image.load(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\image\jet.png').convert()
+        self.surf = pygame.image.load(r'C:\Users\image\jet.png').convert()
         self.surf.set_colorkey((255,255,255), RLEACCEL)
         self.rect = self.surf.get_rect()
 
@@ -61,7 +61,7 @@ class Player(pygame.sprite.Sprite):  #create a rectangle white with size 75,25
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
-        self.surf = pygame.image.load(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\image\missile.png').convert()
+        self.surf = pygame.image.load(r'C:\Users\image\missile.png').convert()
         self.surf.set_colorkey((255,255,255), RLEACCEL)
         self.rect = self.surf.get_rect(
             center =(
@@ -82,7 +82,7 @@ class Enemy(pygame.sprite.Sprite):
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
         super (Cloud, self).__init__()
-        self.surf = pygame.image.load(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\image\cloud.png').convert()
+        self.surf = pygame.image.load(r'C:\Users\image\cloud.png').convert()
         self.surf.set_colorkey((0,0,0), RLEACCEL)
         #the starting position is randomly generated 
         self.rect = self.surf.get_rect(
@@ -121,14 +121,14 @@ ADDCLOUD = pygame.USEREVENT+2
 pygame.time.set_timer(ADDCLOUD, 1500)
 
 #load and play background music 
-pygame.mixer.music.load(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\music\Apoxode_-_Electric_1.mp3')
+pygame.mixer.music.load(r'C:\Users\music\Apoxode_-_Electric_1.mp3')
 pygame.mixer.music.play(loops =-1)
 pygame.mixer.music.set_volume(0.5)
 
 #load all sound files 
-move_up_sound = pygame.mixer.Sound(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\music\Rising_putter.ogg')
-move_down_sound = pygame.mixer.Sound(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\music\Falling_putter.ogg')
-collision_sound = pygame.mixer.Sound(r'C:\Users\Happycode3D-07\Documents\Pessoais\PythonProjects\gameWithPython\PyGame\music\Collision.ogg')
+move_up_sound = pygame.mixer.Sound(r'C:\Users\music\Rising_putter.ogg')
+move_down_sound = pygame.mixer.Sound(r'C:\Users\music\Falling_putter.ogg')
+collision_sound = pygame.mixer.Sound(r'C:\Users\music\Collision.ogg')
 
 move_up_sound.set_volume(0.3)
 move_down_sound.set_volume(0.3)
